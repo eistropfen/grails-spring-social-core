@@ -59,8 +59,11 @@ grails.project.dependency.resolution = {
     mavenCentral()
     // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
     mavenRepo "http://repo.spring.io/milestone/"
+    mavenRepo "http://oss.sonatype.org/content/repositories/snapshots/"
     mavenRepo "http://repo.sindica.to/nexus/content/repositories/public-milestones/"
   }
+
+  def gebVersion = "0.9.3-SNAPSHOT"
 
   dependencies {
     def springSocialVersion = "1.1.0.BUILD-SNAPSHOT"
@@ -72,7 +75,7 @@ grails.project.dependency.resolution = {
     compile("javax.inject:javax.inject:1")
 
     test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
-    //test "org.gebish:geb-spock:0.9.0"
+    test "org.gebish:geb-spock:${gebVersion}"
   }
   plugins {
     // plugins for the build system only
@@ -86,11 +89,7 @@ grails.project.dependency.resolution = {
       export = false
     }
 
-    test(":geb:0.9.3-SNAPSHOT", ":functional-test-development:0.9.4", ":fixtures:1.3-SNAPSHOT", ":codenarc:0.20", ":code-coverage:1.2.7", ":guard:1.0.7") {
-    //test(":geb:0.9.3-SNAPSHOT", ":functional-test-development:0.9.4", ":fixtures:1.3-SNAPSHOT", ":codenarc:0.20", ":code-coverage:1.2.7") {
-    //test(":geb:0.9.3-SNAPSHOT", ":functional-test-development:0.9.4", ":codenarc:0.20", ":code-coverage:1.2.7") {
-    //test(":geb:0.9.3-SNAPSHOT", ":codenarc:0.20", ":code-coverage:1.2.7") {
-    //test(":codenarc:0.20", ":code-coverage:1.2.7") {
+    test(":geb:${gebVersion}", ":functional-test-development:0.9.4", ":fixtures:1.3-SNAPSHOT", ":codenarc:0.20", ":code-coverage:1.2.7", ":guard:1.0.7") {
       export = false
     }
     test(":spock:0.7") {
