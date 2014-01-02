@@ -14,7 +14,7 @@
  */
 package grails.plugins.springsocial
 
-import grails.plugins.springsecurity.SpringSecurityService
+import grails.plugin.springsecurity.SpringSecurityService
 import grails.plugins.springsocial.test.support.TestTwitterConnectionFactory
 import grails.plugins.springsocial.test.support.TestTwitterServiceProvider
 import grails.test.mixin.TestFor
