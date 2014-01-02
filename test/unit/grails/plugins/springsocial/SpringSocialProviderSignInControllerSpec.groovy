@@ -15,6 +15,7 @@
 package grails.plugins.springsocial
 
 import grails.test.mixin.TestFor
+import spock.lang.Specification
 
 /**
  * Created with IntelliJ IDEA.
@@ -24,7 +25,7 @@ import grails.test.mixin.TestFor
  * To change this template use File | Settings | File Templates.
  */
 @TestFor(SpringSocialProviderSignInController)
-class SpringSocialProviderSignInControllerSpec extends spock.lang.Specification {
+class SpringSocialProviderSignInControllerSpec extends Specification {
 
   void "ss s"() {
     controller.s
