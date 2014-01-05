@@ -66,12 +66,12 @@ grails.project.dependency.resolution = {
   def gebVersion = "0.9.3-SNAPSHOT"
 
   dependencies {
-    def springSocialVersion = "1.1.0.BUILD-SNAPSHOT"
+    def springSocialVersion = "1.1.0.M4"
 
     compile("org.springframework.social:spring-social-core:${springSocialVersion}") { transitive = false }
     compile("org.springframework.social:spring-social-web:${springSocialVersion}") { transitive = false }
 
-    compile("org.springframework.security:spring-security-crypto:3.1.4.RELEASE") { transitive = false }
+    compile("org.springframework.security:spring-security-crypto:3.2.0.RELEASE") { transitive = false }
     compile("javax.inject:javax.inject:1")
 
     test "org.spockframework:spock-grails-support:0.7-groovy-2.0"
