@@ -63,7 +63,7 @@ grails.project.dependency.resolution = {
     mavenRepo "http://repo.sindica.to/nexus/content/repositories/public-milestones/"
   }
 
-  def gebVersion = "0.9.3-SNAPSHOT"
+  def gebVersion = "0.9.3"
 
   dependencies {
     def springSocialVersion = "1.1.0.M4"
